@@ -13,7 +13,7 @@ import {
 import { ChartShell, EmptyPlot, TooltipCard, TooltipRow } from "./chart-shell";
 import { useChartColors } from "@/hooks/use-chart-colors";
 import { formatIdr, formatIdrAxis, formatUsd, shortLabel } from "@/lib/format";
-import type { School } from "@/lib/types";
+import { TIER_GROUP_LABEL, TIER_ORDER, type School } from "@/lib/types";
 
 interface Row {
   id: string;
@@ -27,7 +27,7 @@ interface Row {
   high: number;
   lowUsd: number | null;
   highUsd: number | null;
-  isSubject: boolean;
+  tierGroup: School["tierGroup"];
 }
 
 function FeeTooltip({ active, payload }: { active?: boolean; payload?: { payload: Row }[] }) {
@@ -66,10 +66,7 @@ export function FeeBenchmarkChart({ schools }: { schools: School[] }) {
   const rows = useMemo<Row[]>(
     () =>
       schools
-        .filter(
-          (s) =>
-            (s.tierGroup === "tier1" || s.tierGroup === "subject") && s.feePublished,
-        )
+        .filter((s) => s.feePublished)
         .map((s) => ({
           id: s.id,
           label: shortLabel(s.name, s.shortName),
@@ -80,34 +77,38 @@ export function FeeBenchmarkChart({ schools }: { schools: School[] }) {
           high: s.feeHighIdr as number,
           lowUsd: s.feeLowUsd,
           highUsd: s.feeHighUsd,
-          isSubject: s.tierGroup === "subject",
+          tierGroup: s.tierGroup,
         }))
         .sort((a, b) => a.high - b.high),
     [schools],
   );
 
+  const tiersPresent = useMemo(
+    () => TIER_ORDER.filter((tier) => rows.some((row) => row.tierGroup === tier)),
+    [rows],
+  );
+
   return (
     <ChartShell
-      title="Annual tuition range — direct competitors"
+      title="Annual tuition range — all schools"
       description="Entry-level to senior-year fee. Bar length is the spread a family pays across a full school career, not a single price."
       footer={
         <div className="flex flex-wrap items-center gap-4">
-          <span className="flex items-center gap-2 text-xs">
-            <span
-              aria-hidden
-              className="bg-tier-subject h-2.5 w-4 rounded-[2px]"
-            />
-            <span className="text-muted-foreground">Green School Bali</span>
-          </span>
-          <span className="flex items-center gap-2 text-xs">
-            <span aria-hidden className="bg-tier-1 h-2.5 w-4 rounded-[2px]" />
-            <span className="text-muted-foreground">Tier 1 competitor</span>
-          </span>
+          {tiersPresent.map((tier) => (
+            <span key={tier} className="flex items-center gap-2 text-xs">
+              <span
+                aria-hidden
+                className="h-2.5 w-4 rounded-[2px]"
+                style={{ backgroundColor: colors.tier[tier] }}
+              />
+              <span className="text-muted-foreground">{TIER_GROUP_LABEL[tier]}</span>
+            </span>
+          ))}
         </div>
       }
     >
       {rows.length === 0 ? (
-        <EmptyPlot message="No Tier 1 schools with published fees match the current filters." />
+        <EmptyPlot message="No schools with published fees match the current filters." />
       ) : (
         <ResponsiveContainer width="100%" height={Math.max(200, rows.length * 42)}>
           <BarChart
@@ -153,10 +154,7 @@ export function FeeBenchmarkChart({ schools }: { schools: School[] }) {
             <Bar dataKey="base" stackId="fee" fill="transparent" isAnimationActive={false} />
             <Bar dataKey="span" stackId="fee" radius={[4, 4, 4, 4]} maxBarSize={18}>
               {rows.map((row) => (
-                <Cell
-                  key={row.id}
-                  fill={row.isSubject ? colors.tier.subject : colors.tier.tier1}
-                />
+                <Cell key={row.id} fill={colors.tier[row.tierGroup]} />
               ))}
             </Bar>
           </BarChart>

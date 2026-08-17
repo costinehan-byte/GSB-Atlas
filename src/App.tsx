@@ -72,8 +72,7 @@ export default function App() {
               Bali International Schools — Competitive Landscape
             </h1>
             <p className="text-muted-foreground truncate text-xs">
-              {meta.preparedFor || "Competitive strategy review"} · {allSchools.length}{" "}
-              schools · compiled {meta.compiled}
+              Green School Bali · {allSchools.length} schools · compiled {meta.compiled}
             </p>
           </div>
 
