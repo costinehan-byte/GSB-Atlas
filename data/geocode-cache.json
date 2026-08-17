@@ -1,0 +1,306 @@
+{
+  "Green School Bali": {
+    "lat": -8.566996,
+    "lng": 115.21402,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Green School Bali, Bali, Indonesia\" → Green School, The Green School Bridge, Sibangkaja, Abiansemal, Badung, Bali, 80532, Indonesia",
+    "deltaKm": 0.031,
+    "resolvedAt": "2026-08-17T10:22:06.750Z"
+  },
+  "Bali Island School (BIS)": {
+    "lat": -8.679332,
+    "lng": 115.257049,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Bali Island School, Bali, Indonesia\" → Bali Island School, 15, Jalan Danau Buyan IV, Sanur Kaja, Denpasar Selatan, Denpasar, Bali, 80227, Indonesia",
+    "deltaKm": 0.035,
+    "resolvedAt": "2026-08-17T10:22:07.859Z"
+  },
+  "Canggu Community School (CCS)": {
+    "lat": -8.64891,
+    "lng": 115.147665,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Tibubeneng, Bali, Indonesia\" → Tibubeneng, Kuta Utara, Badung, Bali, 80363, Indonesia; bearing kept, radius snapped to the workbook's 1.6km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:22:12.312Z"
+  },
+  "Dyatmika School": {
+    "lat": -8.651733,
+    "lng": 115.265902,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Dyatmika School, Bali, Indonesia\" → Dyatmika School, Jalan Pucuk Bang, Kesiman Kertalangu, Denpasar Timur, Denpasar, Bali, 80237, Indonesia",
+    "deltaKm": 0.002,
+    "resolvedAt": "2026-08-17T10:22:13.425Z"
+  },
+  "Gandhi Memorial Intercontinental School (GMIS Bali)": {
+    "lat": -8.675594,
+    "lng": 115.244821,
+    "confidence": "approximate",
+    "source": "Nominatim/OSM · \"Jl. Tukad Penet, Renon, Denpasar Selatan, Kota Denpasar, Bali, Bali, Indonesia\" → Jalan Tukad Yeh Penet, Renon, Denpasar Selatan, Denpasar, Bali, 80226, Indonesia",
+    "deltaKm": 0.067,
+    "resolvedAt": "2026-08-17T10:22:16.770Z"
+  },
+  "Australian Independent School Bali (AIS)": {
+    "lat": -8.683963,
+    "lng": 115.193067,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Pemecutan, Denpasar Barat, Bali, Indonesia\" → Pemecutan Kelod, Denpasar Barat, Denpasar, Bali, 80119, Indonesia; bearing kept, radius snapped to the workbook's 7.1km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:22:21.585Z"
+  },
+  "Taman Rama Intercultural School": {
+    "lat": -8.617243,
+    "lng": 115.196309,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Ubung Kaja, Denpasar Utara, Bali, Indonesia\" → Ubung Kaja, Denpasar Utara, Denpasar, Bali, 80116, Indonesia; bearing kept, radius snapped to the workbook's 8km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:22:32.598Z"
+  },
+  "Regents School Bali": {
+    "lat": -8.68245,
+    "lng": 115.226696,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Renon, Bali, Indonesia\" → Renon, Denpasar Selatan, Denpasar, Bali, 80226, Indonesia; bearing kept, radius snapped to the workbook's 10.5km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:22:37.050Z"
+  },
+  "Sanur Independent School": {
+    "lat": -8.677795,
+    "lng": 115.251511,
+    "confidence": "approximate",
+    "source": "Nominatim/OSM · \"Jl. Tukad Nyali, Sanur Kaja, Denpasar Selatan, Kota Denpasar, Bali, Bali, Indonesia\" → Jalan Tukad Nyali, Sanur Kaja, Denpasar Selatan, Denpasar, Bali, 80227, Indonesia",
+    "deltaKm": 0.065,
+    "resolvedAt": "2026-08-17T10:22:40.398Z"
+  },
+  "ProEd Global School (Umalas + Nuanu campuses)": {
+    "lat": -8.654415,
+    "lng": 115.150381,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Umalas, Bali, Indonesia\" → Villa Uma Umalas, Jalan Bumbak, Kerobokan, Kuta Utara, Badung, Bali, 80361, Indonesia; bearing kept, radius snapped to the workbook's 1.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:22:49.345Z"
+  },
+  "Lycée Français de Bali": {
+    "lat": -8.651821,
+    "lng": 115.159195,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Umalas, Kuta Utara, Bali, Indonesia\" → Dharma Residence Umalas, Kerobokan, Kuta Utara, Badung, Bali, 80363, Indonesia; bearing kept, radius snapped to the workbook's 2.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:22:53.814Z"
+  },
+  "Montessori School Bali": {
+    "lat": -8.653784,
+    "lng": 115.138958,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Tibubeneng, Bali, Indonesia\" → Tibubeneng, Kuta Utara, Badung, Bali, 80363, Indonesia; bearing kept, radius snapped to the workbook's 0.5km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:22:58.263Z"
+  },
+  "Sunrise School Bali": {
+    "lat": -8.651174,
+    "lng": 115.174727,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Kerobokan, Kuta Utara, Bali, Indonesia\" → Kerobokan, Kuta Utara, Badung, Bali, 80363, Indonesia; bearing kept, radius snapped to the workbook's 4.4km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:02.718Z"
+  },
+  "Uluwatu School": {
+    "lat": -8.837081,
+    "lng": 115.111514,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Pecatu, Kuta Selatan, Bali, Indonesia\" → Pecatu, Kuta Selatan, Badung, Bali, 80362, Indonesia; bearing kept, radius snapped to the workbook's 20.3km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:07.143Z"
+  },
+  "Santosa Intercultural School": {
+    "lat": -8.689147,
+    "lng": 115.237654,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Santosa Intercultural School, Bali, Indonesia\" → Santosa Intercultural School, 88, Jalan Tukad Badung, Renon, Denpasar Selatan, Denpasar, Bali, 80226, Indonesia",
+    "deltaKm": 0.029,
+    "resolvedAt": "2026-08-17T10:23:08.261Z"
+  },
+  "Asian Intercultural School Bali": {
+    "lat": -8.798769,
+    "lng": 115.164366,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Jimbaran, Kuta Selatan, Bali, Indonesia\" → Jimbaran, Kuta Selatan, Badung, Bali, 80362, Indonesia; bearing kept, radius snapped to the workbook's 16.2km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:12.726Z"
+  },
+  "Bhumi Bali School": {
+    "lat": -8.651174,
+    "lng": 115.174727,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Kerobokan, Kuta Utara, Bali, Indonesia\" → Kerobokan, Kuta Utara, Badung, Bali, 80363, Indonesia; bearing kept, radius snapped to the workbook's 4.4km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:17.177Z"
+  },
+  "Sekolah Stella Mundi": {
+    "lat": -8.685724,
+    "lng": 115.23805,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Renon, Denpasar Selatan, Bali, Indonesia\" → Renon, Denpasar Selatan, Denpasar, Bali, 80226, Indonesia; bearing kept, radius snapped to the workbook's 11.8km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:21.628Z"
+  },
+  "Trihita Alam Eco School": {
+    "lat": -8.696705,
+    "lng": 115.240928,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Trihita Alam Eco School, Bali, Indonesia\" → Trihita Alam Eco School, 80-88, Jalan Tukad Badung XXV, Renon, Denpasar Selatan, Denpasar, Bali, 80226, Indonesia",
+    "deltaKm": 0.007,
+    "resolvedAt": "2026-08-17T10:23:22.736Z"
+  },
+  "Bilingual Community School (BCS Bali)": {
+    "lat": -8.666192,
+    "lng": 115.171018,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Bilingual Community School, Bali, Indonesia\" → Bilingual Community School (BCS Bali), Gang BCS, Kerobokan Kelod, Kuta Utara, Badung, Bali, 08361, Indonesia",
+    "deltaKm": 0.018,
+    "resolvedAt": "2026-08-17T10:23:23.856Z"
+  },
+  "Children of the World School": {
+    "lat": -8.618929,
+    "lng": 115.168122,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Dalung, Kuta Utara, Bali, Indonesia\" → Dalung, Kuta Utara, Badung, Bali, 80363, Indonesia; bearing kept, radius snapped to the workbook's 5.5km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:28.292Z"
+  },
+  "Grow in Kedungu": {
+    "lat": -8.599739,
+    "lng": 115.094166,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Belalang, Bali, Indonesia\" → Belalang, Kediri, Tabanan, Bali, 82121, Indonesia; bearing kept, radius snapped to the workbook's 7.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:32.762Z"
+  },
+  "Marigold Community Learning": {
+    "lat": -8.627521,
+    "lng": 115.130816,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Pererenan, Mengwi, Bali, Indonesia\" → Pererenan, Mengwi, Badung, Bali, 80351, Indonesia; bearing kept, radius snapped to the workbook's 3.2km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:37.225Z"
+  },
+  "Skyhawk Academy": {
+    "lat": -8.606462,
+    "lng": 115.121667,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Buwit, Kediri, Bali, Indonesia\" → Buwit, Kediri, Tabanan, Bali, 82121, Indonesia; bearing kept, radius snapped to the workbook's 5.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:41.689Z"
+  },
+  "Future Human School Bali": {
+    "lat": -8.541194,
+    "lng": 115.271469,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Mas, Ubud, Bali, Indonesia\" → Mas, Ubud, Gianyar, Bali, 80571, Indonesia; bearing kept, radius snapped to the workbook's 19.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:46.168Z"
+  },
+  "Pelangi School": {
+    "lat": -8.5369,
+    "lng": 115.267066,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Pelangi School, Bali, Indonesia\" → Pelangi School, Jalan Cempaka, Mas, Ubud, Gianyar, Bali, 80571, Indonesia",
+    "deltaKm": 0.048,
+    "resolvedAt": "2026-08-17T10:23:47.287Z"
+  },
+  "Spark Bali": {
+    "lat": -8.506786,
+    "lng": 115.246046,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Sayan, Ubud, Bali, Indonesia\" → Sayan, Ubud, Gianyar, Bali, 80571, Indonesia; bearing kept, radius snapped to the workbook's 20.6km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:51.761Z"
+  },
+  "Bali Earth School": {
+    "lat": -8.509156,
+    "lng": 115.271297,
+    "confidence": "approximate",
+    "source": "Nominatim/OSM · \"Jl. Raya Andong, Peliatan, Kecamatan Ubud, Kabupaten Gianyar, Bali, Bali, Indonesia\" → Jalan Raya Andong, Peliatan, Ubud, Gianyar, Bali, 80571, Indonesia",
+    "deltaKm": 0.337,
+    "resolvedAt": "2026-08-17T10:23:55.422Z"
+  },
+  "Empathy School International (Nature School)": {
+    "lat": -8.477004,
+    "lng": 115.281426,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Tampaksiring, Bali, Indonesia\" → Tampaksiring, Gianyar, Bali, 80552, Indonesia; bearing kept, radius snapped to the workbook's 25.6km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:23:59.892Z"
+  },
+  "Sekolah Montessori ERDKINDER Bali": {
+    "lat": -8.486795,
+    "lng": 115.273422,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Tampaksiring, Bali, Indonesia\" → Tampaksiring, Gianyar, Bali, 80552, Indonesia; bearing kept, radius snapped to the workbook's 24.2km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:24:04.362Z"
+  },
+  "Joglo Clubhouse School": {
+    "lat": -8.624351,
+    "lng": 115.124607,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Munggu, Mengwi, Bali, Indonesia\" → Munggu, Mengwi, Badung, Bali, 80351, Indonesia; bearing kept, radius snapped to the workbook's 3.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:24:08.807Z"
+  },
+  "Sekolah Lentera Kasih": {
+    "lat": -8.660439,
+    "lng": 115.176438,
+    "confidence": "exact",
+    "source": "Nominatim/OSM · \"Sekolah Lentera Kasih, Bali, Indonesia\" → Sekolah Lentera Kasih, 88, Gang Padi-Padi, Padangsambian Kelod, Denpasar Barat, Kuta Utara, Bali, 80117, Indonesia",
+    "deltaKm": 0.182,
+    "resolvedAt": "2026-08-17T10:24:11.362Z"
+  },
+  "Enlight Christian School": {
+    "lat": -8.686234,
+    "lng": 115.184542,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Padangsambian Klod, Denpasar Barat, Bali, Indonesia\" → Geprek Fiona - Padangsambian Klod, Jalan Gunung Payung, Padangsambian Kelod, Denpasar Barat, Denpasar, Bali, 80117, Indonesia; bearing kept, radius snapped to the workbook's 6.4km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:24:15.819Z"
+  },
+  "Amed Honeycomb School": {
+    "lat": -8.336676,
+    "lng": 115.63765,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Amed, Abang, Bali, Indonesia\" → Amed, Purwa Kerthi, Abang, Karangasem, Bali, 80852, Indonesia; bearing kept, radius snapped to the workbook's 65.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:24:20.300Z"
+  },
+  "Singaraja Montessori School": {
+    "lat": -8.143241,
+    "lng": 115.10688,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Sukasada, Bali, Indonesia\" → Sukasada, Buleleng, Bali, 81161, Indonesia; bearing kept, radius snapped to the workbook's 57.1km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:24:24.772Z"
+  },
+  "North Bali Bilingual School": {
+    "lat": -8.137853,
+    "lng": 115.106585,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Sukasada, Bali, Indonesia\" → Sukasada, Buleleng, Bali, 81161, Indonesia; bearing kept, radius snapped to the workbook's 57.7km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:24:29.216Z"
+  },
+  "ACS Bali": {
+    "lat": -8.732881,
+    "lng": 115.238154,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Serangan, Denpasar Selatan, Bali, Indonesia\" → Jalan Raya Serangan, Sesetan, Denpasar Selatan, Denpasar, Bali, 80223, Indonesia; bearing kept, radius snapped to the workbook's 14.2km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:25:08.316Z"
+  },
+  "The British School of Bali (BSB)": {
+    "lat": -8.485685,
+    "lng": 115.270557,
+    "confidence": "area",
+    "source": "Nominatim/OSM locality \"Ubud, Bali, Indonesia\" → Ubud, Gianyar, Bali, 80571, Indonesia; bearing kept, radius snapped to the workbook's 24.1km from Canggu",
+    "deltaKm": 0,
+    "resolvedAt": "2026-08-17T10:25:14.629Z"
+  }
+}

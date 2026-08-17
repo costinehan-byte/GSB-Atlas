@@ -1,0 +1,22 @@
+services:
+  dashboard:
+    build: .
+    image: bali-schools-dashboard:latest
+    container_name: bali-schools-dashboard
+    restart: unless-stopped
+    ports:
+      # Host 8080 → container 8080. Change the host side if it clashes; put a
+      # reverse proxy in front for TLS.
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      # The only writable path the image needs: nginx's pid and scratch files.
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

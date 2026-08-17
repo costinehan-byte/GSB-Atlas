@@ -1,0 +1,280 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Palette
+ * -------
+ * Neutrals are warm-tinted to sit comfortably against map tiles, which are
+ * never truly neutral. The accent is a teal drawn from Green School Bali's own
+ * positioning; tier colours are a separate categorical ramp chosen to stay
+ * distinguishable on both CARTO Positron (light) and Dark Matter (dark) tiles,
+ * and to remain separable for the common forms of colour-vision deficiency.
+ */
+:root {
+  --radius: 0.65rem;
+
+  --background: oklch(0.99 0.004 100);
+  --foreground: oklch(0.22 0.015 90);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.52 0.11 178);
+  --primary-foreground: oklch(0.99 0.01 178);
+
+  --secondary: oklch(0.96 0.008 100);
+  --secondary-foreground: oklch(0.28 0.02 90);
+
+  --muted: oklch(0.96 0.008 100);
+  --muted-foreground: oklch(0.52 0.015 90);
+
+  --accent: oklch(0.94 0.02 178);
+  --accent-foreground: oklch(0.28 0.04 178);
+
+  --destructive: oklch(0.58 0.19 27);
+  --destructive-foreground: oklch(0.99 0.01 27);
+
+  --border: oklch(0.9 0.008 95);
+  --input: oklch(0.9 0.008 95);
+  --ring: oklch(0.52 0.11 178);
+
+  /*
+   * Competitive tier is an ORDINAL scale — Tier 1 is a bigger threat than
+   * Tier 3 — so it gets a single-hue ramp, darkest for the strongest threat,
+   * rather than arbitrary categorical hues. Validated as an ordinal ramp
+   * (monotone lightness, adjacent ΔL >= 0.06, light end clears the surface).
+   *
+   * Green School Bali is not a point on that scale — it is the subject of the
+   * analysis — so it carries its own hue, well separated from every blue.
+   * Marker size and a permanent label back the colour up, since adjacent
+   * ordinal steps differ in lightness rather than hue.
+   */
+  --tier-subject: #008300;
+  --tier-1: #184f95;
+  --tier-2: #2a78d6;
+  --tier-2-3: #5598e7;
+  --tier-3: #86b6ef;
+
+  /* Single hue for one-series magnitude charts, where the category is already
+   * carried by the axis and colour would encode nothing. */
+  --chart-1: #2a78d6;
+  --chart-2: #eb6834;
+  --chart-3: #1baf7a;
+  --chart-4: #eda100;
+  --chart-5: #4a3aa7;
+
+  --grid: oklch(0.92 0.006 95);
+}
+
+.dark {
+  --background: oklch(0.17 0.012 260);
+  --foreground: oklch(0.94 0.008 240);
+
+  --card: oklch(0.21 0.014 260);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.21 0.014 260);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.72 0.13 178);
+  --primary-foreground: oklch(0.18 0.03 178);
+
+  --secondary: oklch(0.27 0.016 260);
+  --secondary-foreground: oklch(0.94 0.008 240);
+
+  --muted: oklch(0.26 0.014 260);
+  --muted-foreground: oklch(0.68 0.015 250);
+
+  --accent: oklch(0.3 0.035 178);
+  --accent-foreground: oklch(0.92 0.03 178);
+
+  --destructive: oklch(0.65 0.18 25);
+  --destructive-foreground: oklch(0.16 0.03 25);
+
+  --border: oklch(0.3 0.016 260);
+  --input: oklch(0.32 0.016 260);
+  --ring: oklch(0.72 0.13 178);
+
+  /*
+   * The ramp is re-stepped for the dark surface rather than flipped: the
+   * direction inverts so the strongest threat stays the most prominent mark
+   * against dark tiles. Validated independently against this surface.
+   */
+  --tier-subject: #35b862;
+  --tier-1: #b7d3f6;
+  --tier-2: #5598e7;
+  --tier-2-3: #2a78d6;
+  --tier-3: #184f95;
+
+  --chart-1: #3987e5;
+  --chart-2: #d95926;
+  --chart-3: #199e70;
+  --chart-4: #c98500;
+  --chart-5: #9085e9;
+
+  --grid: oklch(0.28 0.014 260);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-grid: var(--grid);
+
+  --color-tier-subject: var(--tier-subject);
+  --color-tier-1: var(--tier-1);
+  --color-tier-2: var(--tier-2);
+  --color-tier-2-3: var(--tier-2-3);
+  --color-tier-3: var(--tier-3);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Tabular figures keep fee and distance columns aligned while sorting. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /*
+   * Leaflet ships its own light-mode chrome. These overrides hand its popups,
+   * controls and attribution to the theme tokens so the map does not flash
+   * white furniture over dark tiles.
+   */
+  .leaflet-container {
+    background: var(--muted);
+    font-family: var(--font-sans);
+    outline: none;
+  }
+
+  .leaflet-popup-content-wrapper,
+  .leaflet-popup-tip {
+    background: var(--popover);
+    color: var(--popover-foreground);
+    box-shadow: 0 10px 30px -12px oklch(0 0 0 / 0.45);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .leaflet-popup-content {
+    margin: 0;
+    width: auto !important;
+    line-height: 1.45;
+  }
+
+  .leaflet-popup-close-button {
+    color: var(--muted-foreground) !important;
+    padding: 6px 6px 0 0 !important;
+  }
+
+  .leaflet-popup-close-button:hover {
+    color: var(--foreground) !important;
+    background: transparent !important;
+  }
+
+  .leaflet-bar,
+  .leaflet-bar a {
+    background: var(--card);
+    color: var(--foreground);
+    border-color: var(--border);
+  }
+
+  .leaflet-bar a:hover {
+    background: var(--secondary);
+    color: var(--foreground);
+  }
+
+  .leaflet-control-attribution {
+    background: color-mix(in oklch, var(--card) 88%, transparent) !important;
+    color: var(--muted-foreground) !important;
+    backdrop-filter: blur(6px);
+    font-size: 10px;
+    border-top-left-radius: var(--radius-sm);
+  }
+
+  .leaflet-control-attribution a {
+    color: var(--muted-foreground) !important;
+  }
+
+  /* Dark tiles are dimmed slightly so markers stay the brightest thing. */
+  .dark .leaflet-tile-pane {
+    filter: brightness(0.92) saturate(0.9);
+  }
+
+  /*
+   * Chrome paints a rectangular focus ring around clicked SVG paths, which
+   * reads as a stray box beside a circular marker. Mouse focus loses the ring;
+   * keyboard focus keeps a visible one, drawn to follow the marker instead.
+   */
+  .leaflet-interactive:focus {
+    outline: none;
+  }
+
+  .leaflet-interactive:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
